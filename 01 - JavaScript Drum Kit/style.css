@@ -1,6 +1,6 @@
 html {
   font-size: 10px;
-  background: url(http://i.imgur.com/b9r5sEL.jpg) bottom center;
+  background: url(https://media.giphy.com/media/xT0GqD0DFbDfr3TbTG/giphy.mp4) bottom center;
   background-size: cover;
 }
 body,html {
@@ -28,13 +28,13 @@ body,html {
   text-align: center;
   color: white;
   background: rgba(0,0,0,0.4);
-  text-shadow: 0 0 .5rem black;
+  text-shadow: 0 0 .5rem #D25CAD;
 }
 
 .playing {
   transform: scale(1.1);
-  border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffc600;
+  border-color: #D25CAD;
+  box-shadow: 0 0 1rem #D25CAD;
 }
 
 kbd {
@@ -46,5 +46,5 @@ kbd {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: .1rem;
-  color: #ffc600;
+  color: #D25CAD;
 }
