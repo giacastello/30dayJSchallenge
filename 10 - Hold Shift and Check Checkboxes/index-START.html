@@ -5,11 +5,12 @@
   <title>Hold Shift to Check Multiple Checkboxes</title>
 </head>
 <body>
+
   <style>
 
     html {
       font-family: sans-serif;
-      background:#ffc600;
+      background:#ec88d7;
     }
 
     .inbox {
@@ -62,23 +63,23 @@
   <div class="inbox">
     <div class="item">
       <input type="checkbox">
-      <p>This is an inbox layout.</p>
+      <p> Tinta </p>
     </div>
     <div class="item">
       <input type="checkbox">
-      <p>Check one item</p>
+      <p> Rodillo de goma </p>
     </div>
     <div class="item">
       <input type="checkbox">
-      <p>Hold down your Shift key</p>
+      <p> papel de gramaje 350 o más  (35x50) </p>
     </div>
     <div class="item">
       <input type="checkbox">
-      <p>Check a lower item</p>
+      <p> Carpeta 35 x 50 </p>
     </div>
     <div class="item">
       <input type="checkbox">
-      <p>Everything inbetween should also be set to checked</p>
+      <p> Aceite de lino </p>
     </div>
     <div class="item">
       <input type="checkbox">
@@ -99,6 +100,30 @@
   </div>
 
 <script>
+  const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
+
+  let lastchecked;
+
+  function handleCheck(e) {
+    let inBetween = false;
+    /* Check if Shift key down */
+    if(e.shiftKey && this.checked ){
+      checkboxes.forEach(checkbox => {
+        console.log (checkbox);
+        if(checkbox === this || checkbox === lastChecked) {
+          inBetween = !inBetween
+        }
+        if (inBetween) {
+          checkbox.checked = true;
+        }
+      });
+      
+    }
+
+
+    lastChecked = this;
+  }
+  checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
 </script>
 </body>
 </html>
